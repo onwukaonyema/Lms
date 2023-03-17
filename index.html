@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/min.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learning Management System for web developers content creators and Graphic designers/>
+      <meta name=" keywords" content="LMS, Learning, System/>
+
+      <!-- twitter card -->
+      <meta name=" twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@0nwuka0nyema" />
+  <meta name="twitter:creator" content="@0nwuka0nyema" />
+  <meta name="twitter:title" content="lms.com" />
+  <meta name="twitter:description"
+    content="Learning Management System for web developers content creators and Graphic designers" />
+
+
+  <!-- facebook -->
+  <meta property="og:title" content="LMS.com" />
+  <meta property="og:site_name" content="LMS.com" />
+  <meta property="og:description"
+    content="Learning Management System for web developers content creators and Graphic designers" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <title>LMS</title>
+</head>
+<script>
+
+  function passwordGenerator() {
+    let companyInitial = "LMS";
+    let first = Math.ceil((Math.random() * 10000) + 2);
+    let second = Math.ceil((Math.random() * 100) + 2);
+    let alpha = ["a", "b", "c", "d", "e"];
+    let alpharand;
+    for (i = 0; i < alpha.length; i++) {
+      let alpharand = alpha[i];
+    };
+    let password = `${companyInitial}${first}${second}`;
+    document.querySelector(".inputtext2").type = "text";
+    document.querySelector(".inputtext2").value = password;
+    document.querySelector(".inputtext3").value = password;
+
+    console.log(password);
+
+  }
+  function siginForm() {
+    document.querySelector(".hform").innerHTML = "Hello Again!";
+    document.querySelector(".hsub").innerHTML = "Welcome back you have been Missed!";
+    document.querySelector(".recover").style.display = "none";
+    document.querySelector(".inputtext3").style.display = "none";
+    document.querySelector(".sub-btn").innerHTML = "Sign in";
+    document.querySelector(".sign").innerHTML = "Sign up";
+    document.querySelector(".ald").innerHTML = "I'm not a Member";
+
+
+    document.querySelector(".sign").onclick = function () {
+      document.querySelector(".inputtext3").style.display = "block";
+      document.querySelector(".hform").innerHTML = "Hello there!";
+      document.querySelector(".hsub").innerHTML = "We will love to have you here with us!";
+      document.querySelector(".recover").style.display = "block";
+      document.querySelector(".sub-btn").innerHTML = "Sign up";
+      document.querySelector(".sign").innerHTML = "Sign in";
+      document.querySelector(".ald").innerHTML = "Already a Member";
+      document.querySelector(".sign").classList.add("signup33")
+
+    };
+
+  }
+  function sig() {
+
+    document.querySelector(".hform").innerHTML = "Hello Again!";
+    document.querySelector(".hsub").innerHTML = "Welcome back you have been Missed!";
+    document.querySelector(".recover").style.display = "none";
+    document.querySelector(".inputtext3").style.display = "none";
+    document.querySelector(".sub-btn").innerHTML = "Sign in";
+    document.querySelector(".sign").innerHTML = "Sign up";
+    document.querySelector(".ald").innerHTML = "I'm not a Member";
+
+  }
+  function openModal() {
+    document.querySelector(".modal").style.display = "block";
+
+
+  }
+
+  function closeModal() {
+    document.querySelector(".modal").classList.add("fade-out");
+
+  }
+  let modal = document.querySelector(".modal");
+
+  window.onclick = function (event) {
+    if (event.target == document.querySelector(".modal")) {
+      document.querySelector(".modal").style.display = "none";
+    }
+  }
+  function openBot() {
+    document.querySelector(".chat-bot").style.display = "block";
+
+
+  }
+  function closeBot() {
+    document.querySelector(".chat-bot").style.display = "none";
+
+
+  }
+  setTimeout(() => {
+       document.querySelector(".preloader").classList.add("fade");
+  }, 6000);
+</script>
+
+<body>
+  <div class="preloader">
+    <div class="loader">
+
+    </div>
+    <legend><p>Loading, Please wait..</p></legend>
+  </div>
+
+  <div class="container">
+    <main>
+      <div class="banner">
+        <h1 class="logo">LMS</h1>
+        <nav>
+          <a class="nav-link" href="##">Product</a>
+          <a class="nav-link" href="##">About</a>
+          <a class="nav-link" href="##">Blog</a>
+
+          <div class="dropdown">
+            <a class="nav-link4" href="##">Courses <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              <a href="#">Web Development</a>
+              <a href="#">Graphic Engineering</a>
+              <a href="#">Content Creation</a>
+            </div>
+          </div>
+
+
+
+      </div>
+
+      </nav>
+      <a href="javascript:void(0)" class="signin" onclick="netlifyIdentity.open();">Sign in</a>
+      <a href="#" class="signup" onclick="netlifyIdentity.open();">Sign up <i class="fa fa-external-link icon"
+          aria-hidden="true"></i>
+      </a>
+    </main>
+
+    <div class="chat-float">
+      <div class="chat-border">
+        <div class="chat-icon">
+          <i class="fa fa-comments" onclick="openBot()" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="chat-bot">
+      <i class="fa fa-times-circle close-bot" onclick="closeBot()" aria-hidden="true"></i>
+
+      <iframe src="https://dopbot.netlify.app/" class="bott"></iframe>
+    </div>
+    <div class="modal">
+      <div class="modal-form">
+        <div class="form-container">
+          <i class="fa fa-times-circle close-btn" onclick="closeModal()" aria-hidden="true"></i>
+          <h2 class="hform">Hello there!</h2>
+          <h3 class="hsub">We will love to have you here with us!</h3>
+          <form>
+            <input type="text" name="username" class="inputtext1" placeholder="Enter username">
+
+            <input type="password" name="password" class="inputtext2" placeholder="Enter password">
+            <input type="password" name="password" class="inputtext3" placeholder="Confirm password">
+
+
+            <a href="##" class="recover" onclick="passwordGenerator()">Generate password</a>
+            <button type="submit" class="sub-btn">Sign up</button>
+            <div class="signicon">
+              <img src="assets/img/google.png" class="gggg" alt="google">
+              <img src="assets/img/app.png" class="gggg" alt="apple">
+              <img src="assets/img/fb.png" class="gggg" alt="facebook">
+              <p class="ald">Already a Member</p> <a href="##" class="sign" onclick="siginForm()"
+                style="text-decoration: none;">Sign in</a>
+            </div>
+        </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="ban">
+
+      <div class="ban1">
+        <h1>
+          Transform the Way You Teach and Learn with Our Powerful "Learning
+          Management System"
+        </h1>
+        <p>
+          Revolutionize your learning experienceby transforming the way you
+          teach and learn with our powerful learning Management System.
+        </p>
+        <a href="##" class="get" onclick="netlifyIdentity.open();">Get Started
+          <i class="fa fa-external-link icon" aria-hidden="true"></i></a>
+      </div>
+      <div class="ban2">
+        <img src="assets/img/girl.jpeg" alt="girl" class="girl" />
+        <div class="float1">
+          <div class="floatin">
+            <i class="fa fa-id-card" aria-hidden="true"></i>
+          </div>
+          <div class="floatout">
+            <p>Become a member</p>
+            <h5>20 Minutes</h5>
+          </div>
+        </div>
+        <div class="float2">
+          <div class="floatin2">
+            <i class="fa fa-id-card" aria-hidden="true"></i>
+          </div>
+          <div class="floatout2">
+            <p>Become a member</p>
+            <h5>20 Minutes</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="sum">
+      <div class="student">
+        <h1>200k</h1>
+        <p>Active Students</p>
+      </div>
+      <div class="student">
+        <h1>200k</h1>
+        <p>Content Creators</p>
+      </div>
+      <div class="studentz">
+        <h1>200k</h1>
+        <p>Top Class Members</p>
+      </div>
+    </div>
+    <div class="other">
+      <div class="works">
+        <h2>How it works</h2>
+        <div class="work">
+          <div class="work1">
+            <i class="fa fa-book icon1" aria-hidden="true"></i>
+            <h3>Sign up</h3>
+            <p>
+              Access unlimited amount of courses online, by completing the
+              first step and sign up.
+            </p>
+          </div>
+          <div class="work2">
+            <i class="fa fa-book icon2" aria-hidden="true"></i>
+            <h3>Enroll in a course</h3>
+            <p>
+              Choose or select from our broad list of courses and get videos
+              and tutorials on them.
+            </p>
+          </div>
+          <div class="work3">
+            <i class="fa fa-book icon3" aria-hidden="true"></i>
+            <h3>Complete Assignment</h3>
+            <p>
+              Attend to every task given to you, because its the best way to
+              build your skill.
+            </p>
+          </div>
+          <div class="work4">
+            <i class="fa fa-book icon4" aria-hidden="true"></i>
+            <h3>Make Progress</h3>
+            <p>
+              Develop zeal to learn thats the best way to thrive and become
+              the best version of you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Mentorship section-->
+  <section>
+    <div class="mentor">
+      <div class="ment1">
+        <h2>Top Professional Mentors/ content creators are provided by us</h2>
+        <p>
+          We Provide sensitization and mentorship program for every member of
+          LMS. LMS has the best and qualified mentors and content creators out
+          there. Join to get started.
+        </p>
+        <a href="##" class="get" onclick="netlifyIdentity.open();">Get Started
+          <i class="fa fa-external-link icon" aria-hidden="true"></i></a>
+      </div>
+      <div class="ment2">
+        <div class="menta">
+          <img src="assets/img/1.jpeg" alt="girls" class="girl1">
+        </div>
+        <div class="mentb">
+          <img src="assets/img/3.jpg" class="girl2" alt="girl smiling with a book on the table">
+          <img src="assets/img/4.jpg" class="girl2" alt="girl smiling with a book on her hands">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Blog section-->
+  <section>
+    <div class="blog100">
+      <div class="blog">
+        <div class="blogpic1">
+          <img src="assets/img/blog.jpg" alt="100 days of coding" class="blogpic">
+        </div>
+        <div class="content">
+
+          <h3 class="cont-hd">Blog</h3>
+          <h2>100 Days of Code - A Complete Guide For Beginners and Experienced</h2>
+          <p>Do you want to become a successful software developer and dreaming of getting into big teach companies?Are
+            you someone who is already working as a developer but look...</p>
+        </div>
+      </div>
+    </div>
+    <div class="learn">
+      <h3 class="cont-hd" style="text-align: center;">The Process</h3>
+      <h2>How it Works</h2>
+      <div class="things">
+        <div class="thing">
+          <img src="assets/img/read.png" alt="read" class="read">
+          <h3>Sort a string alphabetically</h3>
+          <p>Sort a string alphabetically by creating a user-defined function to perform sorting. This function is used
+            to sort the component of an array.</p>
+        </div>
+        <div class="thing">
+          <img src="assets/img/practice.png" alt="practice" class="read">
+          <h3>Explore Practice Problems</h3>
+          <p>Solve DSA problems. Filter based on topic tags and company tags. Get curated problem lists by GFG exercise.
+          </p>
+        </div>
+        <div class="thing">
+          <img src="assets/img/learn.png" alt="learn" class="read">
+          <h3>Competitive Programming</h3>
+          <p>A Live weekend classroom program designed for people who wish to excel in competitive Programming and
+            Software Development.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section>
+    <!--Services section-->
+    <div class="services">
+      <div class="service">
+        <div class="serv1">
+          <h3 class="cont-hd">Our Services</h3>
+          <h2>What We Offer</h2>
+          <p>We offer free and efficient education on different aspected aspect of technology. This program cuts across
+            content creation to web develoment. To know more about what we offer push the button below and let's get
+            started.</p>
+          <p>An LMS service provider simplifies user support by assisting learners with technical issues as well as
+            routine help requests like password resets or course functionality.
+
+            Support may also include assisting managers or instructors with technical difficulties and directing
+            content-related issues to the appropriate team member.</p>
+          <p>Every organization has specific needs for onboarding learners. This can include populating custom fields;
+            adding users to courses, groups or branches; and making sure learners get the proper notifications.
+
+            An LMS service provider finds the best onboarding solution, streamlines it, and carries it out whenever you
+            need it.</p>
+          <a href="##" class="get">Our Services</a>
+        </div>
+        <div class="serv2">
+          <img src="assets/img/blk.jpg" class="blk" alt="book">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!---newsletter section-->
+  <section>
+    <div class="newsletter">
+      <div class="new1">
+        <h2>Newsletter</h2>
+        <p>Supply your details and personal information to get latest update on different courses for free. You have the
+          right to opt-out from this </p>
+      </div>
+      <div class="new2">
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label>Name <input type="text" class="inputtext" name="name" required /></label>
+          </p>
+          <p>
+            <label>Email<input type="email" class="inputtext" name="email" required /></label>
+          </p>
+          <p>
+            <label>Message <textarea name="message" required /></textarea></label>
+          </p>
+          <p>
+            <button type="submit" class="get">Send</button>
+          </p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+  <div class="reviews">
+    <h3 class="cont-hd" style="text-align: center;">Testimonials</h3>
+    <h2>Reviews</h2>
+    <div class="revs">
+      <div class="rev1">
+        <img src="assets/img/tt1.jpg" alt="woman" class="tt1">
+        <h3>Divine .F. </h3>
+        <p>I have being using this service for a longtime now trust me, I will refer this service to anyone i know
+          because its amazing.</p>
+
+      </div>
+      <div class="rev2">
+        <img src="assets/img/tt2.jpg" alt="child and woman" class="tt1">
+        <h3>Zion .F. </h3>
+        <p>I have being using this service for a longtime now trust me, I will refer this service to anyone i know
+          because its amazing.</p>
+
+
+
+      </div>
+      <div class="rev3">
+        <img src="assets/img/tt3.jpg" alt="woman" class="tt1">
+        <h3> Angel .F. </h3>
+
+        <p>I have being using this service for a longtime now trust me, I will refer this service to anyone i know
+          because its amazing.</p>
+
+      </div>
+    </div>
+  </div>
+  <!--progress-->
+  <section>
+    <div class="progress">
+      <div class="pro1">
+        <h3 class="cont-hd">Your Progress</h3>
+        <h2>Keep Track of Your Progress</h2>
+        <p>Keep track on your progress beacuse consistency can take anywhere you want to go. The Journey is the film.
+        </p>
+        <p>LMS provide a simplied user-interface to keep tabs on your progress and Development level.</p>
+        <a href="##" onclick="netlifyIdentity.open();" class="get">Signup</a>
+      </div>
+      <div class="pro2">
+        <img src="assets/img/progress.png" alt="progress" class="pro-pic">
+      </div>
+    </div>
+  </section>
+  <!--Footer section-->
+  <section>
+  <footer>
+    <div class="footer">
+      <div class="foot1">
+      <h1>LMS</h1>
+      <p>Thi LMS was designed by Onwuka Onyemaechi, to reach me click the icons below.</p>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <i class="fa fa-github" aria-hidden="true"></i>
+
+      </div>
+      <div class="foot2">
+        <h4>Support</h4>
+        <a href="##">Products</a>
+        <a href="##">Blog</a>
+        <a href="##">About</a>
+        <a href="##">Services</a>
+        <a href="##">Testimonials</a>
+      </div>
+      <div class="foot3">
+        <h4>Courses</h4>
+        <a href="##">Content Creation</a>
+        <a href="##">Graphic Engineering</a>
+        <a href="##">Web Development</a>
+      </div>
+      <div class="foot4">
+        <p><i class="fa fa-envelope" aria-hidden="true"></i> Stay update on the latest from LMS</p>
+         <input type="email" placeholder="Enter your e-mail address" class="foot-input" required/>
+         <button type="submit" class="get">Sign up</button>
+      </div>
+    </div>
+  </footer>
+  </section>
+</body>
+<script>
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => navigate("/thank-you/"))
+      .catch((error) => alert(error));
+  };
+
+</script>
+
+</html>
